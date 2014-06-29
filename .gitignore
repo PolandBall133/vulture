@@ -1,2 +1,6 @@
 *.exe
 *.o
+main.cpp
+*.cbp
+*.layout
+*.depend

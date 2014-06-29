@@ -10,6 +10,19 @@ namespace vulture{
         inline static Point one();
         inline static Point unitX();
         inline static Point unitY();
+
+        bool operator==(const Point &) const;
+        bool operator!=(const Point &) const;
+        Point operator+(const Point &) const;
+        Point operator-(const Point &) const;
+        Point operator*(const Point &) const;
+        Point operator/(const Point &) const;
+        Point operator%(const Point &) const;
+        Point &operator+=(const Point &);
+        Point &operator-=(const Point &);
+        Point &operator*=(const Point &);
+        Point &operator/=(const Point &);
+        Point &operator%=(const Point &);
     };
 
     Point Point::zero(){

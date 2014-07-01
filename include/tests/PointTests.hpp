@@ -11,6 +11,9 @@
 namespace vulture{
     namespace test{
         class PointFixture : CppUnit::TestFixture{
+            CPPUNIT_TEST_SUITE(PointTest);
+                CPPUNIT_TEST(arithmetical_test);
+            CPPUNIT_TEST_SUITE_END();
         private:
         public:
         };

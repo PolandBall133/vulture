@@ -10,5 +10,9 @@
 
 namespace vulture{
     namespace test{
+        class PointFixture : CppUnit::TestFixture{
+        private:
+        public:
+        };
     }
 }

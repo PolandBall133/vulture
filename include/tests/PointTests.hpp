@@ -15,7 +15,9 @@ namespace vulture{
                 CPPUNIT_TEST(arithmetical_test);
             CPPUNIT_TEST_SUITE_END();
         private:
+            Point a, b;
         public:
+            void arithmetical_test();
         };
     }
 }

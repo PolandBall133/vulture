@@ -10,6 +10,7 @@
 
 namespace vulture{
     namespace test{
-
+        class RectangleSuite : public CppUnit::TestFixture{
+        };
     }
 }

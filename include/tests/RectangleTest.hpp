@@ -10,7 +10,14 @@
 
 namespace vulture{
     namespace test{
-        class RectangleSuite : public CppUnit::TestFixture{
+        class RectangleFixture : public CppUnit::TestFixture{
+        CPPUNIT_TEST_SUITE(RectangleFixture);
+            CPPUNIT_TEST(isEmpty_test);
+            CPPUNIT_TEST(equals_test);
+            CPPUNIT_TEST(hasIntersection_test);
+            CPPUNIT_TEST(getIntersect_test);
+            CPPUNIT_TEST(getUnion_test);
+        CPPUNIT_TEST_SUITE_END();
         public:
             void isEmpty_test();
             void equals_test();
@@ -20,3 +27,4 @@ namespace vulture{
         };
     }
 }
+

@@ -6,7 +6,7 @@
 #include <cppunit/TestSuite.h>
 #include <cppunit/TestCase.h>
 
-#include "Point.hpp"
+#include "Rectangle.hpp"
 
 namespace vulture{
     namespace test{
@@ -18,6 +18,8 @@ namespace vulture{
             CPPUNIT_TEST(getIntersect_test);
             CPPUNIT_TEST(getUnion_test);
         CPPUNIT_TEST_SUITE_END();
+        private:
+            Rectangle a, b, c;
         public:
             void isEmpty_test();
             void equals_test();

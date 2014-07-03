@@ -11,6 +11,12 @@
 namespace vulture{
     namespace test{
         class RectangleSuite : public CppUnit::TestFixture{
+        public:
+            void isEmpty_test();
+            void equals_test();
+            void hasIntersection_test();
+            void getIntersect_test();
+            void getUnion_test();
         };
     }
 }

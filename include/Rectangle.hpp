@@ -13,5 +13,8 @@ namespace vulture{
         bool hasIntersection(const Rectangle &) const;
         Rectangle getIntersect(const Rectangle &) const;
         Rectangle getUnion(const Rectangle &) const;
+
+        bool operator==(const Rectangle &) const;
+        bool operator!=(const Rectangle &) const;
     };
 }

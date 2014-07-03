@@ -4,7 +4,7 @@ namespace vulture{
     namespace test{
         CPPUNIT_TEST_SUITE_REGISTRATION(RectangleFixture);
         void
-        RectangleTest::isEmpty_test(){
+        RectangleFixture::isEmpty_test(){
             a = Rectangle(20, 100, 0, 0);
             CPPUNIT_ASSERT(a.isEmpty());
             b = Rectangle(20, 100, 5, 10);
@@ -12,14 +12,14 @@ namespace vulture{
         }
 
         void
-        RectangleTest::equals_test(){
+        RectangleFixture::equals_test(){
             a = b = Rectangle(1, 1, 2, 2);
             CPPUNIT_ASSERT(a.equals(b));
             CPPUNIT_ASSERT(!(a != b));
         }
 
         void
-        RectangleTest::hasIntersection_test(){
+        RectangleFixture::hasIntersection_test(){
             a = Rectangle(10, 10, 5, 5);
             b = Rectangle(6, 6, 10, 10);
             CPPUNIT_ASSERT(a.hasIntersection(b));
@@ -28,7 +28,7 @@ namespace vulture{
         }
 
         void
-        RectangleTest::getIntersect_test(){
+        RectangleFixture::getIntersect_test(){
             a = Rectangle(0, 0, 10, 10);
             b = Rectangle(5, 5, 5, 5);
             c = a.getIntersect(b);
@@ -36,7 +36,7 @@ namespace vulture{
         }
 
         void
-        RectangleTest::getUnion_test(){
+        RectangleFixture::getUnion_test(){
             a = Rectangle(5, 5, 10, 10);
             b = Rectangle(4, 4, 7, 7);
             c = a.getUnion(b);

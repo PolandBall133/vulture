@@ -5,9 +5,24 @@
     <Test id="1">
       <Name>N7vulture4test12PointFixtureE::arithmetical_test</Name>
     </Test>
+    <Test id="2">
+      <Name>N7vulture4test16RectangleFixtureE::isEmpty_test</Name>
+    </Test>
+    <Test id="3">
+      <Name>N7vulture4test16RectangleFixtureE::equals_test</Name>
+    </Test>
+    <Test id="4">
+      <Name>N7vulture4test16RectangleFixtureE::hasIntersection_test</Name>
+    </Test>
+    <Test id="5">
+      <Name>N7vulture4test16RectangleFixtureE::getIntersect_test</Name>
+    </Test>
+    <Test id="6">
+      <Name>N7vulture4test16RectangleFixtureE::getUnion_test</Name>
+    </Test>
   </SuccessfulTests>
   <Statistics>
-    <Tests>1</Tests>
+    <Tests>6</Tests>
     <FailuresTotal>0</FailuresTotal>
     <Errors>0</Errors>
     <Failures>0</Failures>

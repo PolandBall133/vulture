@@ -16,6 +16,7 @@ namespace vulture{
         private:
             Vector2 a, b;
         public:
+            void arithmetical_test();
         };
     }
 }

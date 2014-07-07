@@ -24,6 +24,8 @@ namespace vulture{
 
         double length() const;
         double lengthSquared() const;
+        //TODO: normalized()
+        void normalize();
 
         inline static constexpr Vector2 zero(){
             return Vector2(0.0, 0.0);

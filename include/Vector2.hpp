@@ -6,7 +6,7 @@ namespace vulture{
         double x, y;
 
         Vector2(double, double);
-        Vector2(double);
+        Vector2(double = 0.0);
 
         Vector2 operator+(const Vector2 &) const;
         Vector2 operator-(const Vector2 &) const;

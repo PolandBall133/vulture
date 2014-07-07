@@ -22,6 +22,9 @@ namespace vulture{
         bool operator==(const Vector2 &) const;
         bool operator!=(const Vector2 &) const;
 
+        double length() const;
+        double lengthSquared() const;
+
         inline static constexpr Vector2 zero(){
             return Vector2(0.0, 0.0);
         }

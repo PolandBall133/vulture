@@ -8,6 +8,16 @@ namespace vulture{
         constexpr Vector2(double = 0.0, double = 0.0);
         constexpr Vector2(double);
 
+        Vector2 operator+(const Vector2 &) const;
+        Vector2 operator-(const Vector2 &) const;
+        Vector2 operator*(const Vector2 &) const;
+        Vector2 operator/(const Vector2 &) const;
+
+        Vector2 &operator+=(const Vector2 &);
+        Vector2 &operator-=(const Vector2 &);
+        Vector2 &operator*=(const Vector2 &);
+        Vector2 &operator/=(const Vector2 &);
+
         inline static constexpr Vector2 zero(){
             return Vector2(0.0, 0.0);
         }
@@ -23,5 +33,7 @@ namespace vulture{
         inline static constexpr Vector2 unitY(){
             return Vector2(0.0, 1.0);
         }
+
+
     };
 }

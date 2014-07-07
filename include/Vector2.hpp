@@ -58,7 +58,5 @@ namespace vulture{
         inline static constexpr Vector2 unitY(){
             return Vector2(0.0, 1.0);
         }
-
-
     };
 }

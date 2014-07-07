@@ -1,4 +1,5 @@
 #include "Vector2.hpp"
+#include "MathHelper.hpp"
 #include <cmath>
 #include <limits>
 

@@ -43,19 +43,19 @@ namespace vulture{
         static Vector2 min(const Vector2 &, const Vector2 &);
         static Vector2 smoothStep(const Vector2 &, const Vector2 &, double);
 
-        inline static constexpr Vector2 zero(){
+        inline static Vector2 zero(){
             return Vector2(0.0, 0.0);
         }
 
-        inline static constexpr Vector2 one(){
+        inline static Vector2 one(){
             return Vector2(1.0, 1.0);
         }
 
-        inline static constexpr Vector2 unitX(){
+        inline static Vector2 unitX(){
             return Vector2(1.0, 0.0);
         }
 
-        inline static constexpr Vector2 unitY(){
+        inline static Vector2 unitY(){
             return Vector2(0.0, 1.0);
         }
     };

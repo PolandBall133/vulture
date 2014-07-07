@@ -2,5 +2,6 @@
 #include <cinttypes>
 
 namespace vulture{
-
+    struct Vector2{
+    };
 }

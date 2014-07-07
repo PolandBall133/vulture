@@ -14,6 +14,7 @@ namespace vulture{
         CPPUNIT_TEST_SUITE(Vector2Fixture);
         CPPUNIT_TEST_SUITE_END();
         private:
+            Vector2 a, b;
         public:
         };
     }

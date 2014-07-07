@@ -20,9 +20,12 @@
     <Test id="6">
       <Name>N7vulture4test16RectangleFixtureE::getUnion_test</Name>
     </Test>
+    <Test id="7">
+      <Name>N7vulture4test14Vector2FixtureE::arithmetical_test</Name>
+    </Test>
   </SuccessfulTests>
   <Statistics>
-    <Tests>6</Tests>
+    <Tests>7</Tests>
     <FailuresTotal>0</FailuresTotal>
     <Errors>0</Errors>
     <Failures>0</Failures>

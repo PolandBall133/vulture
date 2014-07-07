@@ -5,13 +5,13 @@ namespace vulture{
     struct Vector2{
         double x, y;
 
-        constexpr Vector2(double, double);
-        constexpr Vector2(double);
+        Vector2(double, double);
+        Vector2(double);
 
-        constexpr Vector2 operator+(const Vector2 &) const;
-        constexpr Vector2 operator-(const Vector2 &) const;
-        constexpr Vector2 operator*(const Vector2 &) const;
-        constexpr Vector2 operator/(const Vector2 &) const;
+        Vector2 operator+(const Vector2 &) const;
+        Vector2 operator-(const Vector2 &) const;
+        Vector2 operator*(const Vector2 &) const;
+        Vector2 operator/(const Vector2 &) const;
 
         Vector2 &operator+=(const Vector2 &);
         Vector2 &operator-=(const Vector2 &);

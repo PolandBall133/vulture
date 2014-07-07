@@ -18,6 +18,10 @@ namespace vulture{
         Vector2 &operator*=(const Vector2 &);
         Vector2 &operator/=(const Vector2 &);
 
+        Vector2 operator-() const;
+        bool operator==(const Vector2 &) const;
+        bool operator!=(const Vector2 &) const;
+
         inline static constexpr Vector2 zero(){
             return Vector2(0.0, 0.0);
         }

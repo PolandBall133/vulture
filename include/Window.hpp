@@ -2,4 +2,7 @@
 #include <cinttypes>
 
 namespace vulture{
+    class Window{
+    public:
+    };
 }

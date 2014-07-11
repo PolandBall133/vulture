@@ -1,5 +1,7 @@
 #pragma once
+
 #include <cinttypes>
+#include <string>
 
 namespace vulture{
     class Window{

@@ -4,6 +4,7 @@
 #include <string>
 
 namespace vulture{
+    //TODO: Mock (with googlemock?)
     class Window{
     public:
         enum Flags : uint32_t{

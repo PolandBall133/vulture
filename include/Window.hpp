@@ -2,6 +2,7 @@
 
 #include <cinttypes>
 #include <string>
+#include "Point.hpp"
 
 namespace vulture{
     //TODO: Mock (with googlemock?)
@@ -22,11 +23,13 @@ namespace vulture{
             FullScreen_Desktop = 4096 | FullScreen
         };
 
-        virtual const std::string &title() const = 0;
+        virtual const std::string title() const = 0;
         virtual void title(const std::string &) = 0;
         virtual size_t width() const = 0;
         virtual void width(size_t) = 0;
         virtual size_t height() const = 0;
         virtual void height(size_t) = 0;
+        virtual const Point position() const = 0;
+        virtual void position(const Point &) = 0;
     };
 }

@@ -3,5 +3,7 @@
 
 namespace vulture{
     class Game{
+    public:
+        void start();
     };
 }

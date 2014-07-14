@@ -2,4 +2,6 @@
 #include <cinttypes>
 
 namespace vulture{
+    class Game{
+    };
 }

@@ -9,5 +9,10 @@ namespace vulture{
         virtual void onInitialize() = 0;
         virtual void onFinalize() = 0;
         virtual void onDraw() = 0;
+
+        void initialize();
+        void finalize();
+
+        bool quit;
     };
 }

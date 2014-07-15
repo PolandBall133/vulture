@@ -3,6 +3,7 @@
 #include <chrono>
 
 namespace vulture{
+    //TODO: Tests. Mocks? Something? i don't know
     class Game{
     public:
         void start();
@@ -12,10 +13,11 @@ namespace vulture{
         virtual void onFinalize() = 0;
         virtual void onDraw() = 0;
 
+        bool quit;
+    private:
         void update(std::chrono::duration<double>);
         void initialize();
         void finalize();
-
-        bool quit;
+        void draw();
     };
 }

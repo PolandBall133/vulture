@@ -1,17 +1,18 @@
 #pragma once
 #include <cinttypes>
+#include <chrono>
 
 namespace vulture{
     class Game{
     public:
         void start();
     protected:
-        //TODO: onUpdate(ticks)
+        virtual void onUpdate(std::chrono::duration<double>) = 0;
         virtual void onInitialize() = 0;
         virtual void onFinalize() = 0;
         virtual void onDraw() = 0;
 
-        //TODO: update(ticks)
+        void update(std::chrono::duration<double>);
         void initialize();
         void finalize();
 

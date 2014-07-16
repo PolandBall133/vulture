@@ -18,12 +18,11 @@ namespace vulture{
         virtual void onDraw() = 0;
 
         bool quit;
+        std::shared_ptr<Window::Factory> window_factory;
     private:
         void update(std::chrono::duration<double>);
         void initialize();
         void finalize();
         void draw();
-
-        std::shared_ptr<Window::Factory *> window_factory;
     };
 }

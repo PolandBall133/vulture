@@ -9,11 +9,11 @@ namespace vulture{
     void
     Game::start(){
         initialize();
-        auto new_time = std::chrono::system_clock::now();
+        auto new_time = ticks_provider->ticks();
         auto old_time = new_time;
-        std::chrono::duration<double> elapsed_time;
+        auto elapsed_time = new_time - old_time;
         while(!quit){
-            new_time = std::chrono::system_clock::now();
+            new_time = ticks_provider->ticks();
             elapsed_time = new_time - old_time;
             old_time = new_time;
             update(elapsed_time);
@@ -23,7 +23,7 @@ namespace vulture{
     }
 
     void
-    Game::update(std::chrono::duration<double> elapsed_time){
+    Game::update(time_t elapsed_time){
         onUpdate(elapsed_time);
     }
 

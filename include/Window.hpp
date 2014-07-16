@@ -3,6 +3,7 @@
 #include <cinttypes>
 #include <string>
 #include "Point.hpp"
+#include "Rectangle.hpp"
 
 namespace vulture{
     //TODO: Mock (with googlemock?)
@@ -31,5 +32,8 @@ namespace vulture{
         virtual void height(size_t) = 0;
         virtual const Point position() const = 0;
         virtual void position(const Point &) = 0;
+    protected:
+        std::string _title;
+        Rectangle _rect;
     };
 }

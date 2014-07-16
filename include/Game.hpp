@@ -19,7 +19,7 @@ namespace vulture{
 
         bool quit;
         std::shared_ptr<Window::Factory> window_factory;
-    private:
+
         void update(std::chrono::duration<double>);
         void initialize();
         void finalize();

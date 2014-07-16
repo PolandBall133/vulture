@@ -24,6 +24,7 @@ namespace vulture{
             FullScreen_Desktop = 4096 | FullScreen
         };
 
+        Window(const std::string &, const Rectangle &, const Flags);
         virtual const std::string title() const = 0;
         virtual void title(const std::string &) = 0;
         virtual size_t width() const = 0;
@@ -33,8 +34,8 @@ namespace vulture{
         virtual const Point position() const = 0;
         virtual void position(const Point &) = 0;
     protected:
-        Flags _flags;
         std::string _title;
         Rectangle _rect;
+        Flags _flags;
     };
 }

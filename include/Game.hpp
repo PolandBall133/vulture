@@ -1,11 +1,15 @@
 #pragma once
-#include <cinttypes>
+
 #include <chrono>
+#include <memory>
+
+#include "Window.hpp"
 
 namespace vulture{
     //TODO: Tests. Mocks? Something? i don't know
     class Game{
     public:
+        Game(Window::Factory *);
         void start();
     protected:
         virtual void onUpdate(std::chrono::duration<double>) = 0;
@@ -19,5 +23,7 @@ namespace vulture{
         void initialize();
         void finalize();
         void draw();
+
+        std::shared_ptr<Window::Factory *> window_factory;
     };
 }

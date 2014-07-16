@@ -13,6 +13,7 @@ namespace vulture{
 
         static inline const Color Transparent(){
             return Color(0x00, 0x00, 0x00, 0x00);
+        }
 
         static inline const Color AliceBlue(){
             return Color(0xf0, 0xf8, 0xff, 0xff);

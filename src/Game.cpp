@@ -1,6 +1,10 @@
 #include "Game.hpp"
 
 namespace vulture{
+    Game::Game(Window::Factory *factory){
+        window_factory = std::shared_ptr<Window::Factory>(factory);
+    }
+
     void
     Game::start(){
         initialize();

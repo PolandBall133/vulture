@@ -13,7 +13,7 @@ namespace vulture{
         Game(Window::Factory *, TicksProvider *);
         void start();
     protected:
-        virtual void onUpdate(std::chrono::duration<double>) = 0;
+        virtual void onUpdate(time_t) = 0;
         virtual void onInitialize() = 0;
         virtual void onFinalize() = 0;
         virtual void onDraw() = 0;
@@ -22,7 +22,7 @@ namespace vulture{
         std::shared_ptr<Window::Factory> window_factory;
         std::shared_ptr<TicksProvider> ticks_provider;
 
-        void update(std::chrono::duration<double>);
+        void update(time_t);
         void initialize();
         void finalize();
         void draw();

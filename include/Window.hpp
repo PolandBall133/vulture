@@ -33,6 +33,7 @@ namespace vulture{
         virtual const Point position() const = 0;
         virtual void position(const Point &) = 0;
     protected:
+        Flags _flags;
         std::string _title;
         Rectangle _rect;
     };

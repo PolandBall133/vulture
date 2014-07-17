@@ -22,9 +22,9 @@ namespace vulture{
         std::shared_ptr<Window::Factory> window_factory;
         std::shared_ptr<TicksProvider> ticks_provider;
 
-        void update(time_t);
-        void initialize();
-        void finalize();
-        void draw();
+        virtual void update(time_t);
+        virtual void initialize();
+        virtual void finalize();
+        virtual void draw();
     };
 }

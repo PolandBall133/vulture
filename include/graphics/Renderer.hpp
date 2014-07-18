@@ -4,6 +4,7 @@
 #include "Window.hpp"
 #include "Rectangle.hpp"
 #include "Vector2.hpp"
+#include "Size.hpp"
 
 #include <memory>
 
@@ -21,5 +22,8 @@ namespace vulture{
 
         virtual const Vector2 scale() const = 0;
         virtual void scale(const Vector2 &) = 0;
+
+        virtual const Size logicalSize() const = 0;
+        virtual void logicalSize(const Size &) = 0;
     };
 }

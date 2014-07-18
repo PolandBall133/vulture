@@ -3,6 +3,8 @@
 #include "Color.hpp"
 #include "Window.hpp"
 
+#include <memory>
+
 namespace vulture{
     class Renderer{
     public:

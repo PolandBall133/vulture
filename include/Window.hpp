@@ -4,6 +4,7 @@
 #include <string>
 #include "Point.hpp"
 #include "Rectangle.hpp"
+#include "Size.hpp"
 
 namespace vulture{
     //TODO: Mock (with googlemock?)
@@ -25,12 +26,13 @@ namespace vulture{
         };
 
         Window(const std::string &, const Rectangle &, const Flags);
+
         virtual const std::string title() const = 0;
         virtual void title(const std::string &) = 0;
-        virtual size_t width() const = 0;
-        virtual void width(size_t) = 0;
-        virtual size_t height() const = 0;
-        virtual void height(size_t) = 0;
+
+        virtual const Size size() const = 0;
+        virtual void size(const Size &) = 0;
+
         virtual const Point position() const = 0;
         virtual void position(const Point &) = 0;
 

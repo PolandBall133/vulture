@@ -40,9 +40,5 @@ namespace vulture{
             virtual Window *create(const std::string &, const Rectangle &, const Flags) = 0;
             virtual ~Factory(){}
         };
-    protected:
-        std::string _title;
-        Rectangle _rect;
-        Flags _flags;
     };
 }

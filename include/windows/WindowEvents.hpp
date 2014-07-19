@@ -3,4 +3,6 @@
 #include "windows/Window.hpp"
 
 namespace vulture{
+    class WindowEvent{
+    };
 }

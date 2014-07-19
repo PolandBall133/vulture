@@ -3,7 +3,7 @@
 #include <chrono>
 #include <memory>
 
-#include "Window.hpp"
+#include "windows/Window.hpp"
 #include "TicksProvider.hpp"
 
 namespace vulture{

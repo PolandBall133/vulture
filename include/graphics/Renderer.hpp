@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Color.hpp"
-#include "Window.hpp"
+#include "windows/Window.hpp"
 #include "Rectangle.hpp"
 #include "Vector2.hpp"
 #include "Size.hpp"

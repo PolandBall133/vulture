@@ -7,11 +7,12 @@ namespace vulture{
     public:
         class Shown{};
         enum class Type : uint32_t{ Shown };
-
-        Type type() const;
         union Event{
             Shown shown;
         };
+
+        Type type() const;
+
     protected:
         Type _type;
     };

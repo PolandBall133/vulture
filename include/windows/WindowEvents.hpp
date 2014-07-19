@@ -5,10 +5,13 @@
 namespace vulture{
     class WindowEvent{
     public:
-        enum Type : uint32_t {};
+        class Shown{};
+        enum class Type : uint32_t{ Shown };
 
         Type type() const;
-        union Event{ };
+        union Event{
+            Shown shown;
+        };
     protected:
         Type _type;
     };

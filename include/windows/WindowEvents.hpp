@@ -8,6 +8,8 @@ namespace vulture{
         enum Type : uint32_t {};
 
         Type type() const;
+        union event{
+        };
     protected:
         Type _type;
     };

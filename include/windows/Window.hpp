@@ -36,9 +36,11 @@ namespace vulture{
         virtual const Point position() const = 0;
         virtual void position(const Point &) = 0;
 
-        struct Factory{
-            virtual Window *create(const std::string &, const Rectangle &, const Flags) = 0;
-            virtual ~Factory(){}
-        };
+        struct Factory;
+    };
+
+    struct Window::Factory{
+        virtual Window *create(const std::string &, const Rectangle &, const Flags) = 0;
+        virtual ~Factory(){}
     };
 }

@@ -5,15 +5,19 @@
 namespace vulture{
     class WindowEvent{
     public:
-        class Shown{};
+        class Shown;
         enum class Type : uint32_t{ Shown };
-        union Event{
-            Shown shown;
-        };
+        union Event;
 
         Type type() const;
-
     protected:
         Type _type;
+    };
+
+    class WindowEvent::Shown{
+    };
+
+    union WindowEvent::Event{
+        Shown shown;
     };
 }

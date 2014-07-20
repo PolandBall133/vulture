@@ -6,7 +6,20 @@ namespace vulture{
     class WindowEvent{
     public:
         class Shown;
-        enum class Type : uint32_t{ Shown };
+        class Exposed;
+        class Moved;
+        class Resized;
+        class Minimized;
+        class Maximized;
+        class Restored;
+        class Closed;
+
+        enum class Type : uint32_t{
+            Shown , Exposed,
+            Moved, Rseized,
+            Minimized, Maximized,
+            Restored, Closed
+        };
         union Event;
 
         Type type() const;
@@ -17,7 +30,34 @@ namespace vulture{
     class WindowEvent::Shown{
     };
 
+    class WindowEvent::Exposed{
+    };
+
+    class WindowEvent::Moved{
+    };
+
+    class WindowEvent::Resized{
+    };
+
+    class WindowEvent::Minimized{
+    };
+
+    class WindowEvent::Maximized{
+    };
+
+    class WindowEvent::Restored{
+    };
+
+    class WindowEvent::Closed{
+    };
+
     union WindowEvent::Event{
         Shown shown;
+        Exposed exposed;
+        Moved moved;
+        Resized resized;
+        Minimized minimized;
+        Maximized maxmized;
+        Closed restored;
     };
 }

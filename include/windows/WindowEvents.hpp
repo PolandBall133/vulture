@@ -15,8 +15,8 @@ namespace vulture{
         class Closed;
 
         enum class Type : uint32_t{
-            Shown , Exposed,
-            Moved, Rseized,
+            Shown, Exposed,
+            Moved, Resized,
             Minimized, Maximized,
             Restored, Closed
         };

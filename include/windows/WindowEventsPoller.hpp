@@ -2,7 +2,7 @@
 
 #include "windows/Window.hpp"
 #include <memory>
-#include <set>
+#include <map>
 
 namespace vulture{
     class WindowEventsPoller{
@@ -10,6 +10,7 @@ namespace vulture{
         void registerWindow(std::weak_ptr<Window>);
         virtual void PollEvents() = 0;
     protected:
-        set<std::weak_ptr<Window>> windows_container;
+        typedef std::map<uint32_t, std::weak_ptr<Window>> container_type;
+        container_type windows_container;
     };
 }

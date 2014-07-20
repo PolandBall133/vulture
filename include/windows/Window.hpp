@@ -5,6 +5,7 @@
 #include "Point.hpp"
 #include "Rectangle.hpp"
 #include "Size.hpp"
+#include "windows/WindowEvents.hpp"
 
 namespace vulture{
     //TODO: Mock (with googlemock?)
@@ -35,6 +36,8 @@ namespace vulture{
 
         virtual const Point position() const = 0;
         virtual void position(const Point &) = 0;
+
+        virtual void pollEvent(WindowEvent &) = 0;
 
         struct Factory;
     };

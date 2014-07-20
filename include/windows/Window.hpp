@@ -37,8 +37,6 @@ namespace vulture{
         virtual const Point position() const = 0;
         virtual void position(const Point &) = 0;
 
-        virtual void pollEvent(WindowEvent &) = 0;
-
         virtual uint32_t ID() const = 0;
 
         struct Factory;

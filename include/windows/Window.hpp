@@ -39,6 +39,8 @@ namespace vulture{
 
         virtual void pollEvent(WindowEvent &) = 0;
 
+        virtual uint32_t ID() const = 0;
+
         struct Factory;
     };
 

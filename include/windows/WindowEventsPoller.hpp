@@ -11,6 +11,7 @@ namespace vulture{
         void registerWindow(std::weak_ptr<Window>);
         virtual void poll() = 0;
     protected:
+        void callWindowEvent(const WindowEvent &, uint32_t);
         typedef std::map<uint32_t, std::weak_ptr<Window>> container_type;
         container_type windows_container;
     };

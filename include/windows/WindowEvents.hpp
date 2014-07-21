@@ -5,14 +5,14 @@
 namespace vulture{
     class WindowEvent{
     public:
-        class Shown;
-        class Exposed;
-        class Moved;
-        class Resized;
-        class Minimized;
-        class Maximized;
-        class Restored;
-        class Closed;
+        class Shown{};
+        class Exposed{};
+        class Moved{};
+        class Resized{};
+        class Minimized{};
+        class Maximized{};
+        class Restored{};
+        class Closed{};
 
         enum class Type : uint32_t{
             Shown, Exposed,
@@ -20,44 +20,20 @@ namespace vulture{
             Minimized, Maximized,
             Restored, Closed
         };
-        union Event;
+        union Event{
+            Shown shown;
+            Exposed exposed;
+            Moved moved;
+            Resized resized;
+            Minimized minimized;
+            Maximized maxmized;
+            Closed restored;
+        };
 
+        const Event event() const;
         Type type() const;
     protected:
         Type _type;
-    };
-
-    class WindowEvent::Shown{
-    };
-
-    class WindowEvent::Exposed{
-    };
-
-    class WindowEvent::Moved{
-    };
-
-    class WindowEvent::Resized{
-    };
-
-    class WindowEvent::Minimized{
-    };
-
-    class WindowEvent::Maximized{
-    };
-
-    class WindowEvent::Restored{
-    };
-
-    class WindowEvent::Closed{
-    };
-
-    union WindowEvent::Event{
-        Shown shown;
-        Exposed exposed;
-        Moved moved;
-        Resized resized;
-        Minimized minimized;
-        Maximized maxmized;
-        Closed restored;
+        Event _event;
     };
 }

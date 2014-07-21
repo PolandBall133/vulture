@@ -5,11 +5,11 @@
 #include "Point.hpp"
 #include "Rectangle.hpp"
 #include "Size.hpp"
-#include "windows/WindowEvents.hpp"
+#include "windows/IWindowEventHandler.hpp"
 
 namespace vulture{
     //TODO: Mock (with googlemock?)
-    class Window{
+    class Window : public IWindowEventHandler{
     public:
         enum Flags : uint32_t{
             FullScreen = 1,

@@ -5,4 +5,9 @@ namespace vulture{
     WindowEvent::type() const{
         return _type;
     }
+
+    const WindowEvent::Event
+    WindowEvent::event() const{
+        return _event;
+    }
 }

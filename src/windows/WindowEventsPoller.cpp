@@ -15,23 +15,25 @@ namespace vulture{
             window.onShown(we.event().shown);
             break;
         case WindowEvent::Type::Exposed:
-            window.onShown(we.event().exposed);
+            window.onExposed(we.event().exposed);
             break;
         case WindowEvent::Type::Moved:
-            window.onShown(we.event().moved);
+            window.onMoved(we.event().moved);
             break;
         case WindowEvent::Type::Resized:
-            window.onShown(we.event().resized);
+            window.onResized(we.event().resized);
             break;
         case WindowEvent::Type::Minimized:
-            window.onShown(we.event().minimized);
+            window.onMinimized(we.event().minimized);
             break;
         case WindowEvent::Type::Maximized:
-            window.onShown(we.event().maxizmied);
+            window.onMaximized(we.event().maximized);
             break;
         case WindowEvent::Type::Restored:
-            window.onShown(we.event().restored);
+            window.onRestored(we.event().restored);
             break;
+        case WindowEvent::Type::Closed:
+            window.onClosed(we.event().closed);
         }
     }
 }

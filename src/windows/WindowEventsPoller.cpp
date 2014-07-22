@@ -8,27 +8,30 @@ namespace vulture{
     }
 
     void
-    WindowEventsPoller::callWindowEventHandler(const WindowEvent &we, uint32_t id){
-        if(isWindowExpired(id)){
-            unregisterWindow(id);
-            return;
-        }
-        Window &window = *windows_container[id].lock().get();
-        callSpecifiedWindowEventHandler(we, window);
-    }
-
-    bool
-    WindowEventsPoller::isWindowExpired(uint32_t id) const{
-        return windows_container.at(id).expired();
-    }
-
-    void
     WindowEventsPoller::unregisterWindow(uint32_t id){
         windows_container.erase(id);
     }
 
+    bool
+    WindowEventsPoller::windowRegistered(uint32_t id) const{
+        return windows_container.find(id) != windows_container.end();
+    }
+
     void
-    WindowEventsPoller::callSpecifiedWindowEventHandler(const WindowEvent &we, Window &window){
+    WindowEventsPoller::callWindowEventHandler(const WindowEvent &we, uint32_t id){
+        if(!windowRegistered(id))
+            return;
+        auto windowptr = windows_container[id];
+        if(windowptr.expired()){
+            unregisterWindow(id);
+            return;
+        }
+        auto &window = *windowptr.lock();
+        if(window.closed()){
+            unregisterWindow(id);
+            return;
+        }
+
         switch(we.type()){
         case WindowEvent::Type::Shown:
             window.onShown(we.event().shown);

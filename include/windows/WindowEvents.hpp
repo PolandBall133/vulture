@@ -26,8 +26,9 @@ namespace vulture{
             Moved moved;
             Resized resized;
             Minimized minimized;
-            Maximized maxmized;
-            Closed restored;
+            Maximized maximized;
+            Restored restored;
+            Closed closed;
         };
 
         const Event event() const;

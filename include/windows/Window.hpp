@@ -39,7 +39,13 @@ namespace vulture{
 
         virtual uint32_t ID() const = 0;
 
+        bool closed() const;
+
         struct Factory;
+    protected:
+        void closed(bool);
+    private:
+        bool _closed;
     };
 
     struct Window::Factory{

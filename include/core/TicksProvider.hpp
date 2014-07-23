@@ -2,7 +2,7 @@
 #include <ctime>
 
 namespace vulture{
-    namespace Core{
+    namespace core{
         class TicksProvider{
         public:
             virtual time_t ticks() = 0;

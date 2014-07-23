@@ -1,7 +1,7 @@
 #include "Core/Game.hpp"
 
 namespace vulture{
-    namespace Core{
+    namespace core{
         using namespace windows;
         Game::Game(Window::Factory *factory, TicksProvider *tp){
             window_factory = std::shared_ptr<Window::Factory>(factory);

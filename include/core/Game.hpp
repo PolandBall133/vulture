@@ -7,7 +7,7 @@
 #include "TicksProvider.hpp"
 
 namespace vulture{
-    namespace Core{
+    namespace core{
         class Game{
         public:
             Game(windows::Window::Factory *, TicksProvider *);

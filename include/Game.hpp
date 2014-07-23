@@ -10,7 +10,7 @@ namespace vulture{
     //TODO: Tests. Mocks? Something? i don't know
     class Game{
     public:
-        Game(Window::Factory *, TicksProvider *);
+        Game(windows::Window::Factory *, TicksProvider *);
         void start();
     protected:
         virtual void onUpdate(time_t) = 0;
@@ -19,7 +19,7 @@ namespace vulture{
         virtual void onDraw() = 0;
 
         bool quit;
-        std::shared_ptr<Window::Factory> window_factory;
+        std::shared_ptr<windows::Window::Factory> window_factory;
         std::shared_ptr<TicksProvider> ticks_provider;
 
         virtual void update(time_t);

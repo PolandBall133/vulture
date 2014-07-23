@@ -1,7 +1,7 @@
 #include "windows/EventsPoller.hpp"
 
 namespace vulture{
-    namespace window{
+    namespace windows{
         void
         EventsPoller::registerWindow(std::weak_ptr<Window> window){
             uint32_t id = window.lock().get()->ID();
@@ -19,7 +19,7 @@ namespace vulture{
         }
 
         void
-        EventsPoller::callWindowEventHandler(const WindowEvent &we, uint32_t id){
+        EventsPoller::callWindowEventHandler(const windows::Event &we, uint32_t id){
             if(!windowRegistered(id))
                 return;
             auto windowptr = windows_container[id];
@@ -34,29 +34,29 @@ namespace vulture{
             }
 
             switch(we.type()){
-            case WindowEvent::Type::Shown:
-                window.onShown(we.event().shown);
+            case Event::Type::Shown:
+                window.onShown(we.events().shown);
                 break;
-            case WindowEvent::Type::Exposed:
-                window.onExposed(we.event().exposed);
+            case Event::Type::Exposed:
+                window.onExposed(we.events().exposed);
                 break;
-            case WindowEvent::Type::Moved:
-                window.onMoved(we.event().moved);
+            case Event::Type::Moved:
+                window.onMoved(we.events().moved);
                 break;
-            case WindowEvent::Type::Resized:
-                window.onResized(we.event().resized);
+            case Event::Type::Resized:
+                window.onResized(we.events().resized);
                 break;
-            case WindowEvent::Type::Minimized:
-                window.onMinimized(we.event().minimized);
+            case Event::Type::Minimized:
+                window.onMinimized(we.events().minimized);
                 break;
-            case WindowEvent::Type::Maximized:
-                window.onMaximized(we.event().maximized);
+            case Event::Type::Maximized:
+                window.onMaximized(we.events().maximized);
                 break;
-            case WindowEvent::Type::Restored:
-                window.onRestored(we.event().restored);
+            case Event::Type::Restored:
+                window.onRestored(we.events().restored);
                 break;
-            case WindowEvent::Type::Closed:
-                window.onClosed(we.event().closed);
+            case Event::Type::Closed:
+                window.onClosed(we.events().closed);
             }
         }
     }

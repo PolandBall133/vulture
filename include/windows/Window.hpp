@@ -5,10 +5,10 @@
 #include "Point.hpp"
 #include "Rectangle.hpp"
 #include "Size.hpp"
-#include "windows/IWindowEventHandler.hpp"
+#include "windows/IEventHandler.hpp"
 
 namespace vulture{
-    namespace window{
+    namespace windows{
         class Window : public IEventHandler{
         public:
             enum Flags : uint32_t{
@@ -39,7 +39,7 @@ namespace vulture{
 
             virtual uint32_t ID() const = 0;
 
-            virtual void onClosed(const WindowEvent::Closed &) override;
+            virtual void onClosed(const Event::Closed &) override;
             bool closed() const;
 
             struct Factory;

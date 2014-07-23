@@ -3,8 +3,8 @@
 #include <cinttypes>
 
 namespace vulture{
-    namespace window{
-        class WindowEvent{
+    namespace windows{
+        class Event{
         public:
             class Shown{};
             class Exposed{};
@@ -21,7 +21,7 @@ namespace vulture{
                 Minimized, Maximized,
                 Restored, Closed
             };
-            union Event{
+            union Events{
                 Shown shown;
                 Exposed exposed;
                 Moved moved;
@@ -32,11 +32,11 @@ namespace vulture{
                 Closed closed;
             };
 
-            const Event event() const;
+            const Events events() const;
             Type type() const;
         protected:
             Type _type;
-            Event _event;
+            Events _events;
         };
     }
 }

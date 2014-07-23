@@ -1,11 +1,11 @@
 #include "windows/Window.hpp"
 
 namespace vulture{
-    namespace window{
+    namespace windows{
         Window::Window(const std::string &title, const Rectangle &rect, const Flags flags){}
 
         void
-        Window::onClosed(const WindowEvent::Closed &){
+        Window::onClosed(const Event::Closed &){
             closed(true);
         }
 

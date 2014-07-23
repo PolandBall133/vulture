@@ -1,20 +1,20 @@
 #pragma once
 
 #include <cinttypes>
-#include "windows/WindowEvents.hpp"
+#include "windows/Events.hpp"
 
 namespace vulture{
-    namespace window{
+    namespace windows{
         class IEventHandler{
         public:
-            virtual void onShown(const WindowEvent::Shown &){}
-            virtual void onExposed(const WindowEvent::Exposed &){}
-            virtual void onMoved(const WindowEvent::Moved &){}
-            virtual void onResized(const WindowEvent::Resized &){}
-            virtual void onMinimized(const WindowEvent::Minimized &){}
-            virtual void onMaximized(const WindowEvent::Maximized &){}
-            virtual void onRestored(const WindowEvent::Restored &){}
-            virtual void onClosed(const WindowEvent::Closed &){}
+            virtual void onShown(const Event::Shown &){}
+            virtual void onExposed(const Event::Exposed &){}
+            virtual void onMoved(const Event::Moved &){}
+            virtual void onResized(const Event::Resized &){}
+            virtual void onMinimized(const Event::Minimized &){}
+            virtual void onMaximized(const Event::Maximized &){}
+            virtual void onRestored(const Event::Restored &){}
+            virtual void onClosed(const Event::Closed &){}
         };
     }
 }

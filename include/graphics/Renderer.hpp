@@ -11,7 +11,7 @@
 namespace vulture{
     class Renderer{
     public:
-        Renderer(std::weak_ptr<Window>);
+        Renderer(std::weak_ptr<windows::Window>);
 
         virtual void clear() = 0;
         virtual void present() = 0;

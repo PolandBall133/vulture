@@ -6,5 +6,10 @@ namespace vulture{
         Texture::color() const{
             return _color;
         }
+
+        void
+        Texture::color(const Color &val){
+            _color = val;
+        }
     }
 }

@@ -14,6 +14,8 @@ namespace vulture{
             void load(Renderer &, const std::string &) = 0;
             Color color() const;
             void color(Color) = 0;
+        protected:
+            Color _color;
         };
     }
 }

@@ -12,6 +12,8 @@ namespace vulture{
         class Texture{
         public:
             void load(Renderer &, const std::string &) = 0;
+            Color color() const;
+            void color(Color) = 0;
         };
     }
 }

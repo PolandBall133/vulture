@@ -8,6 +8,7 @@
 
 #include <string>
 #include <memory>
+#include <set>
 
 namespace vulture{
     namespace graphics{
@@ -15,6 +16,7 @@ namespace vulture{
         class Texture{
         public:
             virtual void load(renderer_type &, const std::string &) = 0;
+            virtual const std::set<std::string> &supportedFormats() const = 0;
             virtual const Color &color() const;
             virtual void color(const Color &);
         protected:

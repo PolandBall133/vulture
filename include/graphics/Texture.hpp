@@ -15,13 +15,16 @@ namespace vulture{
         template<class renderer_type>
         class Texture{
         public:
-            Texture(std::weak_ptr<renderer_type> renderer){}
+            Texture(std::weak_ptr<renderer_type> renderer):
+                _renderer_handle(renderer){}
             virtual void load(renderer_type &, const std::string &) = 0;
             virtual const std::set<std::string> &supportedFormats() const = 0;
             virtual const Color &color() const;
             virtual void color(const Color &);
         protected:
             Color _color;
+            typedef std::weak_ptr<renderer_type> renderer_handle;
+            renderer_handle _renderer_handle;
         };
 
         template<class T>

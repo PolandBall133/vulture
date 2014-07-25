@@ -11,9 +11,10 @@
 
 namespace vulture{
     namespace graphics{
+        template<class renderer_type>
         class Texture{
         public:
-            virtual void load(Renderer &, const std::string &) = 0;
+            virtual void load(renderer_type &, const std::string &) = 0;
             virtual const Color &color() const;
             virtual void color(const Color &);
         protected:

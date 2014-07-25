@@ -15,6 +15,7 @@ namespace vulture{
         template<class renderer_type>
         class Texture{
         public:
+            Texture(){}
             virtual void load(renderer_type &, const std::string &) = 0;
             virtual const std::set<std::string> &supportedFormats() const = 0;
             virtual const Color &color() const;

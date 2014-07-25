@@ -20,5 +20,17 @@ namespace vulture{
         protected:
             Color _color;
         };
+
+        template<class T>
+        const Color &
+        Texture<T>::color() const{
+            return _color;
+        }
+
+        template<class T>
+        void
+        Texture<T>::color(const Color &val){
+            _color = val;
+        }
     }
 }

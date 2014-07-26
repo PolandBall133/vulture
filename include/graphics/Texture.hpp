@@ -16,7 +16,8 @@ namespace vulture{
         class Texture{
         public:
             Texture(std::weak_ptr<renderer_type> renderer):
-                _renderer_handle(renderer){}
+                _renderer_handle(renderer),
+                _color(0, 0, 0, 0){}
             virtual void load(const std::string &) = 0;
             virtual const std::set<std::string> &supportedFormats() const = 0;
             virtual const Color &color() const;

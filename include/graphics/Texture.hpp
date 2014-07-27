@@ -4,8 +4,6 @@
 #include "Vector2.hpp"
 #include "Size.hpp"
 
-#include "graphics/Renderer.hpp"
-
 #include <string>
 #include <memory>
 #include <set>

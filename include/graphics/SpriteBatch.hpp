@@ -1,6 +1,10 @@
 #pragma once
 
 #include "Color.hpp"
+#include "Vector2.hpp"
+#include "Point.hpp"
+#include "Rectangle.hpp"
+#include "graphics/Texture.hpp"
 
 namespace vulture{
     namespace graphics{
@@ -15,7 +19,12 @@ namespace vulture{
         };
 
         struct SpriteBatch::Drawer{
-
+            virtual void texture(
+                graphics::Texture &,
+                const Rectangle &,
+                double,
+                const Point = Point::zero()
+            ) = 0;
         };
     }
 }

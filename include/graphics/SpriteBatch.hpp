@@ -7,6 +7,9 @@ namespace vulture{
             virtual void end() = 0;
             virtual const Color backgroundColor() const = 0;
             virtual void backgroundColor(const Color &) const = 0;
+
+            struct Drawer;
+            virtual Drawer &draw() = 0;
         };
     }
 }

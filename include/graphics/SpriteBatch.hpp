@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Color.hpp"
+
 namespace vulture{
     namespace graphics{
         class SpriteBatch{
@@ -10,6 +12,10 @@ namespace vulture{
 
             struct Drawer;
             virtual Drawer &draw() = 0;
+        };
+
+        struct SpriteBatch::Drawer{
+
         };
     }
 }

@@ -9,20 +9,29 @@
 namespace vulture{
     namespace graphics{
         class SpriteBatch{
+        protected:
+            struct Drawer;
+        public:
             virtual void begin() = 0;
             virtual void end() = 0;
             virtual const Color backgroundColor() const = 0;
             virtual void backgroundColor(const Color &) const = 0;
 
-            struct Drawer;
             virtual Drawer &draw() = 0;
         };
 
         struct SpriteBatch::Drawer{
             virtual void texture(
                 graphics::Texture &,
+                const Vector &,
                 const Rectangle &,
-                double,
+                double = 0.0,
+                const Point = Point::zero()
+            ) = 0;
+            virtual void texture(
+                graphics::Texture &,
+                const Vector &,
+                double = 0.0,
                 const Point = Point::zero()
             ) = 0;
         };

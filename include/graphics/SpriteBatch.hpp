@@ -28,12 +28,24 @@ namespace vulture{
                 double = 0.0,
                 const Point = Point::zero()
             ) = 0;
+
             virtual void texture(
                 graphics::Texture &,
                 const Vector &,
                 double = 0.0,
                 const Point = Point::zero()
             ) = 0;
+
+            virtual void quad(
+                const Rectangle &,
+                const Color &
+            ) = 0;
+
+            virtual void point{
+                const Point &,
+                const Point &,
+                const Color &
+            } = 0;
         };
     }
 }

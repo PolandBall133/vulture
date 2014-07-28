@@ -8,9 +8,36 @@
 
 namespace vulture{
     namespace graphics{
+        template<class TextureType>
         class SpriteBatch{
         protected:
-            struct Drawer;
+            struct Drawer{
+                virtual void texture(
+                    TextureType &,
+                    const Vector2 &,
+                    const Rectangle &,
+                    double = 0.0,
+                    const Point = Point::zero()
+                ) = 0;
+
+                virtual void texture(
+                    TextureType &,
+                    const Vector2 &,
+                    double = 0.0,
+                    const Point = Point::zero()
+                ) = 0;
+
+                virtual void quad(
+                    const Rectangle &,
+                    const Color &
+                ) = 0;
+
+                virtual void line(
+                    const Point &,
+                    const Point &,
+                    const Color &
+                ) = 0;
+            };
         public:
             virtual void begin() = 0;
             virtual void end() = 0;
@@ -19,33 +46,5 @@ namespace vulture{
 
             virtual Drawer &draw() = 0;
         };
-
-        struct SpriteBatch::Drawer{
-            virtual void texture(
-                graphics::Texture &,
-                const Vector2 &,
-                const Rectangle &,
-                double = 0.0,
-                const Point = Point::zero()
-            ) = 0;
-
-            virtual void texture(
-                graphics::Texture &,
-                const Vector2 &,
-                double = 0.0,
-                const Point = Point::zero()
-            ) = 0;
-
-            virtual void quad(
-                const Rectangle &,
-                const Color &
-            ) = 0;
-
-            virtual void line(
-                const Point &,
-                const Point &,
-                const Color &
-            ) = 0;
-        };
-    };
+    }
 }

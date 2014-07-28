@@ -17,5 +17,15 @@ namespace vulture{
         Texture::color(const Color &val){
             _color = val;
         }
+
+        const Size &
+        Texture::size() const{
+            return _size;
+        }
+
+        void
+        Texture::size(const Size &val){
+            _size = val;
+        }
     }
 }

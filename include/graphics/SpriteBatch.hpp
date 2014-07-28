@@ -41,11 +41,11 @@ namespace vulture{
                 const Color &
             ) = 0;
 
-            /*virtual void point{
+            virtual void line(
                 const Point &,
                 const Point &,
                 const Color &
-            } = 0;*/
+            ) = 0;
         };
-    }
+    };
 }

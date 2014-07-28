@@ -11,6 +11,8 @@ namespace vulture{
         inline static Point unitX();
         inline static Point unitY();
 
+
+        inline Point operator-() const;
         bool operator==(const Point &) const;
         bool operator!=(const Point &) const;
         Point operator+(const Point &) const;
@@ -39,5 +41,9 @@ namespace vulture{
 
     Point Point::unitY(){
         return Point(0, 1);
+    }
+
+    Point Point::operator-() const{
+        return Point(-x, -y);
     }
 }

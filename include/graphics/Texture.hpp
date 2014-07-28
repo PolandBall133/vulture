@@ -20,7 +20,7 @@ namespace vulture{
             virtual const Color &color() const;
             virtual void color(const Color &);
 
-            virtual const Size size() = 0;
+            virtual const Size size() const = 0;
         protected:
             Color _color;
         };

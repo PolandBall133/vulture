@@ -20,9 +20,12 @@ namespace vulture{
             virtual const Color &color() const;
             virtual void color(const Color &);
 
-            virtual const Size size() const = 0;
+            virtual const Size &size() const;
         protected:
+            virtual void size(const Size &);
+        private:
             Color _color;
+            Size _size;
         };
     }
 }

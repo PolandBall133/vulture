@@ -11,10 +11,11 @@ namespace vulture{
         template<class TextureType>
         class SpriteBatch{
         protected:
-            struct Drawer{
+            class Drawer{
+            public:
                 virtual void texture(
                     TextureType &,
-                    const Vector2 &,
+                    const Rectangle &,
                     const Rectangle &,
                     double = 0.0,
                     const Point = Point::zero()
@@ -22,7 +23,7 @@ namespace vulture{
 
                 virtual void texture(
                     TextureType &,
-                    const Vector2 &,
+                    const Point &,
                     double = 0.0,
                     const Point = Point::zero()
                 ) = 0;

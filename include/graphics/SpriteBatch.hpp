@@ -15,7 +15,7 @@ namespace vulture{
             virtual void begin() = 0;
             virtual void end() = 0;
             virtual const Color backgroundColor() const = 0;
-            virtual void backgroundColor(const Color &) const = 0;
+            virtual void backgroundColor(const Color &) = 0;
 
             virtual Drawer &draw() = 0;
         };
@@ -23,7 +23,7 @@ namespace vulture{
         struct SpriteBatch::Drawer{
             virtual void texture(
                 graphics::Texture &,
-                const Vector &,
+                const Vector2 &,
                 const Rectangle &,
                 double = 0.0,
                 const Point = Point::zero()
@@ -31,7 +31,7 @@ namespace vulture{
 
             virtual void texture(
                 graphics::Texture &,
-                const Vector &,
+                const Vector2 &,
                 double = 0.0,
                 const Point = Point::zero()
             ) = 0;
@@ -41,11 +41,11 @@ namespace vulture{
                 const Color &
             ) = 0;
 
-            virtual void point{
+            /*virtual void point{
                 const Point &,
                 const Point &,
                 const Color &
-            } = 0;
+            } = 0;*/
         };
     }
 }

@@ -2,11 +2,19 @@
 
 namespace vulture{
 
-    Rectangle::Rectangle(int32_t x,
-                         int32_t y,
-                         int32_t width,
-                         int32_t height)
-            : x(x), y(y), width(width), height(height){}
+    Rectangle::Rectangle(
+        int32_t x,
+        int32_t y,
+        uint32_t width,
+        uint32_t height
+    ):
+        x(x),
+        y(y),
+        width(width),
+        height(height){}
+
+    Rectangle::Rectangle(const Point &p, const Size &s):
+        x(p.x), y(p.y), width(s.width), height(s.height){}
 
 
     bool

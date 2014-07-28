@@ -14,9 +14,13 @@ namespace vulture{
         public:
             Texture(const Color &);
             virtual void load(const std::string &) = 0;
+
             virtual const std::set<std::string> &supportedFormats() const = 0;
+
             virtual const Color &color() const;
             virtual void color(const Color &);
+
+            virtual const Size size() = 0;
         protected:
             Color _color;
         };

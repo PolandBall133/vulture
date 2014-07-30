@@ -6,7 +6,7 @@
 #include <cppunit/TestSuite.h>
 #include <cppunit/TestCase.h>
 
-#include "Rectangle.hpp"
+#include "util/Rectangle.hpp"
 
 namespace vulture{
     namespace test{

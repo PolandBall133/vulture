@@ -1,4 +1,4 @@
-#include "Point.hpp"
+#include "util/Point.hpp"
 
 namespace vulture{
     Point::Point(int32_t x, int32_t y):

@@ -1,4 +1,4 @@
-#include "tests/PointTests.hpp"
+#include "util/tests/PointTests.hpp"
 
 namespace vulture{
     namespace test{

@@ -13,9 +13,9 @@
 #include <cppunit/XmlOutputter.h>
 #include <iostream>
 
-#include "PointTests.hpp"
-#include "RectangleTests.hpp"
-#include "Vector2.hpp"
+#include "util/tests/PointTests.hpp"
+#include "util/tests/RectangleTests.hpp"
+#include "util/Vector2.hpp"
 
 namespace vulture{
 

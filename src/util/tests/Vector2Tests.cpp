@@ -1,4 +1,4 @@
-#include "tests/Vector2Tests.hpp"
+#include "util/tests/Vector2Tests.hpp"
 #include <limits>
 
 namespace vulture{

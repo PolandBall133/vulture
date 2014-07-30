@@ -6,18 +6,19 @@
 #include <cppunit/TestSuite.h>
 #include <cppunit/TestCase.h>
 
-#include "Point.hpp"
+#include "util/Vector2.hpp"
 
 namespace vulture{
     namespace test{
-        class PointFixture : public CppUnit::TestFixture{
-            CPPUNIT_TEST_SUITE(PointFixture);
-                CPPUNIT_TEST(arithmetical_test);
-            CPPUNIT_TEST_SUITE_END();
+        class Vector2Fixture : public CppUnit::TestFixture{
+        CPPUNIT_TEST_SUITE(Vector2Fixture);
+            CPPUNIT_TEST(arithmetical_test);
+        CPPUNIT_TEST_SUITE_END();
         private:
-            Point a, b;
+            Vector2 a, b;
         public:
             void arithmetical_test();
         };
     }
 }
+

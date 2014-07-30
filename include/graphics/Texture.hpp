@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Color.hpp"
-#include "Vector2.hpp"
-#include "Size.hpp"
+#include "util/Color.hpp"
+#include "util/Vector2.hpp"
+#include "util/Size.hpp"
 
 #include <string>
 #include <memory>

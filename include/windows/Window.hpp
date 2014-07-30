@@ -2,9 +2,9 @@
 
 #include <cinttypes>
 #include <string>
-#include "Point.hpp"
-#include "Rectangle.hpp"
-#include "Size.hpp"
+#include "util/Point.hpp"
+#include "util/Rectangle.hpp"
+#include "util/Size.hpp"
 #include "windows/IEventHandler.hpp"
 
 namespace vulture{

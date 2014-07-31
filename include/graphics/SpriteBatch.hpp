@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Color.hpp"
-#include "Vector2.hpp"
-#include "Point.hpp"
-#include "Rectangle.hpp"
+#include "util/Color.hpp"
+#include "util/Vector2.hpp"
+#include "util/Point.hpp"
+#include "util/Rectangle.hpp"
 #include "graphics/Texture.hpp"
 
 namespace vulture{

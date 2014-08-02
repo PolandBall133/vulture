@@ -8,16 +8,11 @@ namespace vulture{
             namespace joys{
                 class Event{
                 public:
-                    class Added{};
-                    class Removed{};
-
                     enum class Type : uint32_t{
                         Added, Removed
                     };
 
                     union Events{
-                        Added added;
-                        Removed removed;
                     };
 
                     const Events events() const;

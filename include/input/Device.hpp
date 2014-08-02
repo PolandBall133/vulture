@@ -1,9 +1,13 @@
 #pragma once
 
+#include <cinttypes>
+
 namespace vulture{
     namespace input{
-        class Device{
-            virtual uint32_t ID() const = 0;
-        };
+        namespace devices{
+            class Device{
+                virtual uint32_t ID() const = 0;
+            };
+        }
     }
 }

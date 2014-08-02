@@ -21,10 +21,13 @@ namespace vulture{
                     private:
                         Manager &_m;
                     public:
+                        Requestor(Manager &);
                         Manager::container_type &all();
                         const Manager::container_type &all();
                     };
                 public:
+                    Requestor &request();
+                    const Requestor &request() const;
                 };
             }
         }

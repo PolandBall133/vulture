@@ -16,6 +16,7 @@ namespace vulture{
             CPPUNIT_TEST_SUITE_END();
         private:
             typedef Manager<int> manager_type;
+            manager_type m;
         public:
             void factory_creating_test();
         };

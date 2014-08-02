@@ -40,7 +40,7 @@ namespace vulture{
     T&
     Manager<T>::Factory::create(){
         _manager._storage.push_back(T());
-        return _manager.storage.back();
+        return _manager._storage.back();
     }
 
     template<typename T>

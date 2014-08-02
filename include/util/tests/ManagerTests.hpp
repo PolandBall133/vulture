@@ -17,7 +17,7 @@ namespace vulture{
         private:
             typedef Manager<int> manager_type;
         public:
-            manager_type factory_creating_test();
+            void factory_creating_test();
         };
     }
 }

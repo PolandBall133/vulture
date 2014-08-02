@@ -12,9 +12,13 @@ namespace vulture{
     namespace test{
         class ManagerFixture : public CppUnit::TestFixture{
             CPPUNIT_TEST_SUITE(ManagerFixture);
+                CPPUNIT_TEST(factory_creating_test);
             CPPUNIT_TEST_SUITE_END();
         private:
+            typedef Manager<int> manager_type;
+            manager_type m;
         public:
+            manager_type factory_creating_test();
         };
     }
 }

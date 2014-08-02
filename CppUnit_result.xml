@@ -3,29 +3,32 @@
   <FailedTests></FailedTests>
   <SuccessfulTests>
     <Test id="1">
-      <Name>N7vulture4test12PointFixtureE::arithmetical_test</Name>
+      <Name>N7vulture4test14ManagerFixtureE::factory_creating_test</Name>
     </Test>
     <Test id="2">
-      <Name>N7vulture4test16RectangleFixtureE::isEmpty_test</Name>
+      <Name>N7vulture4test12PointFixtureE::arithmetical_test</Name>
     </Test>
     <Test id="3">
-      <Name>N7vulture4test16RectangleFixtureE::equals_test</Name>
+      <Name>N7vulture4test16RectangleFixtureE::isEmpty_test</Name>
     </Test>
     <Test id="4">
-      <Name>N7vulture4test16RectangleFixtureE::hasIntersection_test</Name>
+      <Name>N7vulture4test16RectangleFixtureE::equals_test</Name>
     </Test>
     <Test id="5">
-      <Name>N7vulture4test16RectangleFixtureE::getIntersect_test</Name>
+      <Name>N7vulture4test16RectangleFixtureE::hasIntersection_test</Name>
     </Test>
     <Test id="6">
-      <Name>N7vulture4test16RectangleFixtureE::getUnion_test</Name>
+      <Name>N7vulture4test16RectangleFixtureE::getIntersect_test</Name>
     </Test>
     <Test id="7">
+      <Name>N7vulture4test16RectangleFixtureE::getUnion_test</Name>
+    </Test>
+    <Test id="8">
       <Name>N7vulture4test14Vector2FixtureE::arithmetical_test</Name>
     </Test>
   </SuccessfulTests>
   <Statistics>
-    <Tests>7</Tests>
+    <Tests>8</Tests>
     <FailuresTotal>0</FailuresTotal>
     <Errors>0</Errors>
     <Failures>0</Failures>

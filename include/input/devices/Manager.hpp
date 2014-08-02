@@ -25,15 +25,6 @@ namespace vulture{
                         Manager::container_type &all();
                         const Manager::container_type &all() const;
                     };
-                    class EventsPoller{
-                    private:
-                        Manager &_m;
-                    protected:
-                        Manager &manager();
-                    public:
-                        EventsPoller(Manager &);
-                        virtual void poll() = 0;
-                    };
                     container_type _storage;
                     std::shared_ptr<Requestor> _requestor;
                 public:
@@ -57,15 +48,6 @@ namespace vulture{
                 Manager<T>::Requestor::all() const{
                     return _m._storage;
                 }
-
-                template<class T>
-                Manager<T>::Manager(){
-                    _requestor = std::make_shared<Requestor>(*this);
-                }
-
-                template<class T>
-                Manager<T>::EventsPoller::EventsPoller(Manager &m):
-                    _m(m){}
             }
         }
     }

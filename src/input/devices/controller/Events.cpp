@@ -1,4 +1,4 @@
-#include "input/Controller/Events.hpp"
+#include "input/devices/controller/Events.hpp"
 
 namespace vulture{
     namespace input{

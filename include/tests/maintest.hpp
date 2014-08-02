@@ -16,7 +16,6 @@
 #include "util/tests/PointTests.hpp"
 #include "util/tests/RectangleTests.hpp"
 #include "util/tests/Vector2Tests.hpp"
-#include "util/tests/ManagerTests.hpp"
 
 namespace vulture{
 

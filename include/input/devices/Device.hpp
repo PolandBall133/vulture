@@ -8,10 +8,11 @@ namespace vulture{
         namespace devices{
             class Device : IEventHandler{
             public:
+                Device();
                 virtual uint32_t ID() const = 0;
                 bool connected() const;
-                virtual onAdded() override;
-                virtual onRemoved() override;
+                virtual void onAdded() override;
+                virtual void onRemoved() override;
             protected:
                 void connected(bool);
             private:

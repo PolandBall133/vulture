@@ -4,13 +4,9 @@
 
 namespace vulture{
     template<typename T>
-    class Manager{
+    class Manager : public std::list<T>{
         friend class Factory;
     private:
-        typedef T managed_type;
-        typedef std::list<T> container_type;
-        container_type _storage;
-
         class Factory{
         private:
             Manager &_manager;
@@ -22,10 +18,7 @@ namespace vulture{
         Factory _factory;
     public:
         Manager();
-        typedef container_type iterator;
         Factory &factory();
-        iterator begin();
-        iterator end();
     };
 
     template<typename T>
@@ -37,21 +30,15 @@ namespace vulture{
         _manager(manager){}
 
     template<typename T>
-    T&
+    T &
     Manager<T>::Factory::create(){
-        _manager._storage.push_back(T());
-        return _manager._storage.back();
+        _manager.push_back(T());
+        return _manager.back();
     }
 
     template<typename T>
-    typename Manager<T>::iterator
-    Manager<T>::begin(){
-        return _storage.begin();
-    }
-
-    template<typename T>
-    typename Manager<T>::iterator
-    Manager<T>::end(){
-        return _storage.end();
+    typename Manager<T>::Factory &
+    Manager<T>::factory(){
+        return _factory;
     }
 }

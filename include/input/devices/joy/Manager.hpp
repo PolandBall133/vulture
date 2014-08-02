@@ -9,27 +9,27 @@ namespace vulture{
         namespace devices{
             namespace joys{
                 class Manager{
-                    friend Requestor;
+                    friend class Requestor;
                 public:
                     typedef Joy managed_type;
                     typedef std::shared_ptr<managed_type> pointer_type;
                     typedef std::list<pointer_type> container_type;
                 private:
-                    container_type _storage;
-                protected:
                     class Requestor{
                     private:
                         Manager &_m;
                     public:
                         Requestor(Manager &);
                         Manager::container_type &all();
-                        const Manager::container_type &all();
+                        const Manager::container_type &all() const;
                     };
-                    Requestor _requestor;
                 public:
                     Manager();
                     Requestor &request();
                     const Requestor &request() const;
+                private:
+                    container_type _storage;
+                    std::shared_ptr<Requestor> _requestor;
                 };
             }
         }

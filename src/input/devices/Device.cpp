@@ -3,6 +3,9 @@
 namespace vulture{
     namespace input{
         namespace devices{
+            Device::Device():
+                _connected(false){}
+
             bool
             Device::connected() const{
                 return _connected;

@@ -10,6 +10,7 @@ namespace vulture{
             int &b = m.factory().create();
             int &c = m.factory().create();
             a = 111; b = a*2; c = a*3;
+            CPPUNIT_ASSERT(m.size() == 3);
         }
     }
 }

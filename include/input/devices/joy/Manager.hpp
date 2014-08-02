@@ -25,7 +25,9 @@ namespace vulture{
                         Manager::container_type &all();
                         const Manager::container_type &all();
                     };
+                    Requestor _requestor;
                 public:
+                    Manager();
                     Requestor &request();
                     const Requestor &request() const;
                 };

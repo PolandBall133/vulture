@@ -1,4 +1,4 @@
-#include "input/Joy/Events.hpp"
+#include "input/devices/joy/Events.hpp"
 
 namespace vulture{
     namespace input{

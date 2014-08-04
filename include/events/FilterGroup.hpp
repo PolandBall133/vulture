@@ -1,5 +1,6 @@
 #pragma once
 #include "events/EventsFilter.hpp"
+#include <list>
 
 namespace vulture{
     namespace events{

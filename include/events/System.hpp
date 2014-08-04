@@ -5,7 +5,7 @@ namespace vulture{
     namespace events{
         class System{
         public:
-
+            virtual void poll() = 0;
         protected:
         private:
         };

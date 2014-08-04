@@ -18,11 +18,13 @@ namespace vulture{
 
             Type type() const;
             const Events &events() const;
+            uint32_t windowID() const;
         protected:
-
+            void windowID(uint32_t);
         private:
             Type _type;
             Events _events;
+            uint32_t _windowID;
         };
     }
 }

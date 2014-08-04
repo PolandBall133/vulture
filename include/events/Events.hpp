@@ -8,13 +8,13 @@ namespace vulture{
             enum Type: uint32_t{
                 Window
             };
-            union Events{
-                WindowEvent window
+            union EventsUnion{
+                WindowEvent window;
             };
-            const Events &events() const;
+            const EventsUnion &events() const;
             Type type() const;
         protected:
-            Events _events;
+            EventsUnion _events;
             Type _type;
         };
     }

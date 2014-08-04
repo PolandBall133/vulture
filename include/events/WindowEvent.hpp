@@ -15,7 +15,7 @@ namespace vulture{
                 Size size;
             };
 
-            enum Type : uint32_t{
+            enum class Type : uint32_t{
                 Shown, Exposed,
                 Moved, Resized,
                 Minimized, Maximized,

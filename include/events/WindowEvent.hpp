@@ -1,10 +1,20 @@
 #pragma once
 #include <cinttypes>
+#include "util/Point.hpp"
+#include "util/Size.hpp"
 
 namespace vulture{
     namespace events{
         class WindowEvent{
         public:
+            struct Moved{
+                Point position;
+            };
+
+            struct Resized{
+                Size size;
+            };
+
             enum Type : uint32_t{
                 Shown, Exposed,
                 Moved, Resized,
@@ -13,7 +23,8 @@ namespace vulture{
             };
 
             union Events{
-
+                Moved moved;
+                Resized resized;
             };
 
             Type type() const;

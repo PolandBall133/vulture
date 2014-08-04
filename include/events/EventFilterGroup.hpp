@@ -6,7 +6,7 @@
 
 namespace vulture{
     namespace events{
-        class FilterGroup{
+        class EventsFilterGroup{
         public:
             FilterGroup(const std::string &);
             const std::string &name() const;

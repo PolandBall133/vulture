@@ -1,4 +1,4 @@
-#include "events/EventFilterGroup.hpp"
+#include "events/EventsFilterGroup.hpp"
 
 using namespace std;
 namespace vulture{
@@ -15,6 +15,7 @@ namespace vulture{
         EventsFilterGroup &
         EventsFilterGroup::add(shared_ptr<EventsFilter> efptr){
             _eventsFilters.push_back(efptr);
+            return *this;
         }
     }
 }

@@ -11,8 +11,18 @@ namespace vulture{
                 Minimized, Maximized,
                 Restored, Closed
             };
+
+            union Events{
+
+            };
+
+            Type type() const;
+            const Events &events() const;
         protected:
+
         private:
+            Type _type;
+            Events _events;
         };
     }
 }

@@ -8,8 +8,11 @@ namespace vulture{
     namespace events{
         class FilterGroup{
         public:
+            FilterGroup(const std::string &);
+            const std::string &name() const;
         protected:
         private:
+            const std::string _name;
         };
     }
 }

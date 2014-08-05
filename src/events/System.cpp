@@ -4,14 +4,14 @@ using namespace std;
 namespace vulture{
     namespace events{
         void
-        System::addFilters(shared_ptr<EventsFilterGroup> efgptr){
-            _eventsFilterGroups.push_back(efgptr);
+        System::addFilters(shared_ptr<FilterGroup> efgptr){
+            _filterGroups.push_back(efgptr);
         }
 
         void
-        System::handleEvents(const Events &events){
-            for(auto &filterGroupptr : _eventsFilterGroups)
-                if(filterGroupptr->filter(events))
+        System::handleEvent(const Event &event){
+            for(auto &filterGroupPtr : _filterGroups)
+                if(filterGroupPtr->filter(event))
                     return;
         }
     }

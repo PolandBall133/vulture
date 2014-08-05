@@ -1,13 +1,13 @@
 #pragma once
-#include "events/Events.hpp"
+#include "events/Event.hpp"
 #include <string>
 
 namespace vulture{
     namespace events{
-        class EventsFilter{
+        class Filter{
         public:
-            EventsFilter(const std::string &);
-            virtual bool filter(const Events &) = 0;
+            Filter(const std::string &);
+            virtual bool filter(const Event &) = 0;
             const std::string &name() const;
         private:
             const std::string _name;

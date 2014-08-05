@@ -3,18 +3,18 @@
 
 namespace vulture{
     namespace events{
-        class Events{
+        class Event{
         public:
             enum Type: uint32_t{
                 Window
             };
-            union EventsUnion{
+            union Events{
                 WindowEvent window;
             };
-            const EventsUnion &events() const;
+            const Events &events() const;
             Type type() const;
         protected:
-            EventsUnion _events;
+            Events _events;
             Type _type;
         };
     }

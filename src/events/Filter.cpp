@@ -1,14 +1,14 @@
-#include "events/EventsFilter.hpp"
+#include "events/Filter.hpp"
 
 using namespace std;
 namespace vulture{
     namespace events{
-        EventsFilter::EventsFilter(
+        Filter::Filter(
             const string &name
         ): _name(name){}
 
         const string &
-        EventsFilter::name() const{
+        Filter::name() const{
             return _name;
         }
     }

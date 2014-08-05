@@ -2,20 +2,20 @@
 
 #define VULTURE_WINDOWS_DEFINE_FILTER(name) \
     name##Filter:: name##Filter(): \
-        EventsFilter( "windows::" #name "Filter" ){} \
-    bool name##Filter::filter(const Events &events){ \
-        return events.events().window.type() == WindowEvent::Type:: name; \
+        Filter( "windows::" #name "Filter" ){} \
+    bool name##Filter::filter(const Event &event){ \
+        return event.events().window.type() == WindowEvent::Type:: name; \
     }
 
 namespace vulture{
     using namespace events;
     namespace windows{
         FiltersGroup::FiltersGroup():
-            EventsFilterGroup("windows::Filters"){}
+            FilterGroup("windows::Filters"){}
 
         bool
-        FiltersGroup::checkType(const Events &events){
-            return events.type() == Events::Type::Window;
+        FiltersGroup::checkType(const Event &event){
+            return event.type() == Event::Type::Window;
         }
 
         VULTURE_WINDOWS_DEFINE_FILTER(Shown);

@@ -1,24 +1,24 @@
 #pragma once
 
 #include <cinttypes>
-#include "events/EventsFilterGroup.hpp"
+#include "events/FilterGroup.hpp"
 
 #define VULTURE_WINDOWS_DECLARE_FILTER(name) \
     class name##Filter: \
-        public events::EventsFilter{ \
+        public events::Filter{ \
     public: \
         name##Filter(); \
-        virtual bool filter(const events::Events &) override; \
+        virtual bool filter(const events::Event &) override; \
     }
 
 namespace vulture{
     namespace windows{
         class FiltersGroup:
-            public events::EventsFilterGroup{
+            public events::FilterGroup{
         public:
             FiltersGroup();
         protected:
-            virtual bool checkType(const events::Events &) override;
+            virtual bool checkType(const events::Event &) override;
         };
 
         VULTURE_WINDOWS_DECLARE_FILTER(Shown);

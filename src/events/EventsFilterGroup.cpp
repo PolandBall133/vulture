@@ -17,5 +17,13 @@ namespace vulture{
             _eventsFilters.push_back(efptr);
             return *this;
         }
+
+        bool
+        EventsFilterGroup::filter(const Events &events){
+            for(auto &eventsFilter : _eventsFilters)
+                if(eventsFilter->filter(events))
+                    return true;
+            return false;
+        }
     }
 }

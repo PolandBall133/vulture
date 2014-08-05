@@ -15,6 +15,7 @@ namespace vulture{
             EventsFilterGroup &add(std::shared_ptr<EventsFilter>);
             bool filter(const Events &);
         protected:
+            virtual bool checkType(const Events &) = 0;
             std::list<std::shared_ptr<EventsFilter>> _eventsFilters;
         private:
             const std::string _name;

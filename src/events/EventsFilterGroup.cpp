@@ -20,6 +20,8 @@ namespace vulture{
 
         bool
         EventsFilterGroup::filter(const Events &events){
+            if(!checkType(events))
+                return false;
             for(auto &eventsFilter : _eventsFilters)
                 if(eventsFilter->filter(events))
                     return true;

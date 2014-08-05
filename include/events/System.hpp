@@ -12,7 +12,7 @@ namespace vulture{
             void addFilters(std::shared_ptr<EventsFilterGroup>);
         protected:
             std::list<std::shared_ptr<EventsFilterGroup>> _eventsFilterGroups;
-            void handleEvent(const Events &);
+            void handleEvents(const Events &);
         private:
         };
     }

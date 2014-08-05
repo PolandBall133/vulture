@@ -9,7 +9,7 @@ namespace vulture{
         }
 
         void
-        System::handleEvent(const Events &events){
+        System::handleEvents(const Events &events){
             for(auto &filterGroupptr : _eventsFilterGroups)
                 if(filterGroupptr->filter(events))
                     return;

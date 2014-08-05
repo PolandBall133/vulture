@@ -1,7 +1,7 @@
 #pragma once
 
 #include "windows/Window.hpp"
-#include "windows/Events.hpp"
+#include "events/WindowEvent.hpp"
 #include <memory>
 #include <map>
 
@@ -14,7 +14,7 @@ namespace vulture{
             bool windowRegistered(uint32_t) const;
             virtual void poll() = 0;
         protected:
-            void callWindowEventHandler(const windows::Event &, uint32_t);
+            void callWindowEventHandler(const events::WindowEvent &, uint32_t);
         private:
             typedef std::map<uint32_t, std::weak_ptr<Window>> container_type;
             container_type windows_container;

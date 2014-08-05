@@ -1,6 +1,7 @@
 #include "windows/EventsPoller.hpp"
 
 namespace vulture{
+    using namespace events;
     namespace windows{
         void
         EventsPoller::registerWindow(std::weak_ptr<Window> window){
@@ -19,7 +20,7 @@ namespace vulture{
         }
 
         void
-        EventsPoller::callWindowEventHandler(const windows::Event &we, uint32_t id){
+        EventsPoller::callWindowEventHandler(const WindowEvent &we, uint32_t id){
             if(!windowRegistered(id))
                 return;
             auto windowptr = windows_container[id];
@@ -34,29 +35,29 @@ namespace vulture{
             }
 
             switch(we.type()){
-            case Event::Type::Shown:
-                window.onShown(we.events().shown);
+            case WindowEvent::Type::Shown:
+                window.onShown();
                 break;
-            case Event::Type::Exposed:
-                window.onExposed(we.events().exposed);
+            case WindowEvent::Type::Exposed:
+                window.onExposed();
                 break;
-            case Event::Type::Moved:
+            case WindowEvent::Type::Moved:
                 window.onMoved(we.events().moved);
                 break;
-            case Event::Type::Resized:
+            case WindowEvent::Type::Resized:
                 window.onResized(we.events().resized);
                 break;
-            case Event::Type::Minimized:
-                window.onMinimized(we.events().minimized);
+            case WindowEvent::Type::Minimized:
+                window.onMinimized();
                 break;
-            case Event::Type::Maximized:
-                window.onMaximized(we.events().maximized);
+            case WindowEvent::Type::Maximized:
+                window.onMaximized();
                 break;
-            case Event::Type::Restored:
-                window.onRestored(we.events().restored);
+            case WindowEvent::Type::Restored:
+                window.onRestored();
                 break;
-            case Event::Type::Closed:
-                window.onClosed(we.events().closed);
+            case WindowEvent::Type::Closed:
+                window.onClosed();
             }
         }
     }

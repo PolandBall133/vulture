@@ -11,7 +11,7 @@ namespace vulture{
             virtual void poll() = 0;
             void addFilters(std::shared_ptr<EventsFilterGroup>);
         protected:
-            std::list<std::shared_ptr>> _eventsFilterGroups;
+            std::list<std::shared_ptr<EventsFilterGroup>> _eventsFilterGroups;
         private:
         };
     }

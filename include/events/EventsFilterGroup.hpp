@@ -1,5 +1,6 @@
 #pragma once
 #include "events/EventsFilter.hpp"
+#include "events/Events.hpp"
 #include <list>
 #include <memory>
 #include <string>
@@ -12,6 +13,7 @@ namespace vulture{
             EventsFilterGroup(const std::string &);
             const std::string &name() const;
             EventsFilterGroup &add(std::shared_ptr<EventsFilter>);
+            bool filter(const Events &);
         protected:
             std::list<std::shared_ptr<EventsFilter>> _eventsFilters;
         private:

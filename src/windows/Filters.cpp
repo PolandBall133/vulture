@@ -4,9 +4,10 @@
     name##Filter:: name##Filter(): \
         Filter( "windows::" #name "Filter" ){} \
     bool name##Filter::filter(const Event &event){ \
-        return event.events().window.type() == WindowEvent::Type:: name; \
+        return event.events.window.type == WindowEvent::Type:: name; \
     }
 
+using namespace std;
 namespace vulture{
     using namespace events;
     namespace windows{
@@ -15,7 +16,7 @@ namespace vulture{
 
         bool
         FiltersGroup::checkType(const Event &event){
-            return event.type() == Event::Type::Window;
+            return event.type == Event::Type::Window;
         }
 
         VULTURE_WINDOWS_DEFINE_FILTER(Shown);

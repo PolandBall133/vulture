@@ -25,7 +25,7 @@ namespace vulture{
                 Moved, Resized,
                 Minimized, Maximized,
                 Restored, Closed
-            };
+            } type;
 
             union Events{
                 Shown shown;
@@ -36,17 +36,9 @@ namespace vulture{
                 Maximized maximized;
                 Restored restored;
                 Closed closed;
-            };
+            } events;
 
-            Type type() const;
-            const Events &events() const;
-            uint32_t windowID() const;
-        protected:
-            void windowID(uint32_t);
-        private:
-            Type _type;
-            Events _events;
-            uint32_t _windowID;
+            uint32_t ID;
         };
     }
 }

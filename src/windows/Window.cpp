@@ -4,11 +4,11 @@ namespace vulture{
     namespace windows{
         Window::Window(const std::string &title, const Rectangle &rect, const Flags flags){}
 
+
         void
-        Window::onClosed(const events::WindowEvent::Closed &){
+        Window::onClosed(const events::WindowEvent::Closed &closedEvent){
             closed(true);
         }
-
         bool
         Window::closed() const{
             return _closed;

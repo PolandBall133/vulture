@@ -1,5 +1,6 @@
 #include "windows/EventsCaller.hpp"
 
+#include <iostream>
 using namespace vulture::events;
 using namespace std;
 
@@ -10,13 +11,15 @@ using namespace std;
     bool \
     EventsCaller:: name##Filter::filter(const Event &event){ \
         if(!windows:: name##Filter::filter(event)) return false; \
-        for(auto it = _windows.begin(); it != _windows.end(); ++it) \
-            if(it->expired()) \
+        for(auto it = _windows.begin(); it != _windows.end(); ++it){ \
+            if(it->expired()){ \
                 _windows.erase(it); \
-            else if(event.events().window.windowID() == it->lock()->ID()){ \
-                it->lock()->on##name (event.events().window.events(). lowercasename); \
+            } \
+            else if(event.events.window.ID == it->lock()->ID()){ \
+                it->lock()->on##name (event.events.window.events. lowercasename); \
                 return true; \
             } \
+        } \
         return false; \
     }
 
@@ -34,7 +37,8 @@ namespace vulture{
         EventsCaller::EventsCaller(
             shared_ptr<System> system
         ): _system(system){
-            _filtersGroup
+            _filtersGroup = make_shared<FiltersGroup>();
+            (*_filtersGroup.get())
                 .add(make_shared<ShownFilter>(_windows))
                 .add(make_shared<ExposedFilter>(_windows))
                 .add(make_shared<MovedFilter>(_windows))
@@ -43,6 +47,7 @@ namespace vulture{
                 .add(make_shared<MaximizedFilter>(_windows))
                 .add(make_shared<RestoredFilter>(_windows))
                 .add(make_shared<ClosedFilter>(_windows));
+            _system->addFilters(_filtersGroup);
         }
 
         EventsCaller &

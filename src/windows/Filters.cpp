@@ -11,7 +11,7 @@ namespace vulture{
     using namespace events;
     namespace windows{
         FiltersGroup::FiltersGroup():
-            FilterGroup("windows::Filters"){}
+            events::FiltersGroup("windows::Filters"){}
 
         bool
         FiltersGroup::checkType(const Event &event){

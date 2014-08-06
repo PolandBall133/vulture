@@ -9,9 +9,9 @@ namespace vulture{
         class System{
         public:
             virtual void poll() = 0;
-            void addFilters(std::shared_ptr<FilterGroup>);
+            void addFilters(std::weak_ptr<FiltersGroup>);
         protected:
-            std::list<std::shared_ptr<FilterGroup>> _filterGroups;
+            std::list<std::weak_ptr<FiltersGroup>> _filtersGroups;
             void handleEvent(const Event &);
         private:
         };

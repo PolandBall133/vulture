@@ -14,7 +14,7 @@
 namespace vulture{
     namespace windows{
         class FiltersGroup:
-            public events::FilterGroup{
+            public events::FiltersGroup{
         public:
             FiltersGroup();
         protected:
@@ -23,7 +23,7 @@ namespace vulture{
 
         VULTURE_WINDOWS_DECLARE_FILTER(Shown);
         VULTURE_WINDOWS_DECLARE_FILTER(Exposed);
-        VULTURE_WINDOWS_DECLARE_FILTER(Moved);
+        VULTURE_WINDOWS_DECLARE_FILTER(Moved) ;
         VULTURE_WINDOWS_DECLARE_FILTER(Resized);
         VULTURE_WINDOWS_DECLARE_FILTER(Minimized);
         VULTURE_WINDOWS_DECLARE_FILTER(Maximized);

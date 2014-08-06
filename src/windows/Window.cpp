@@ -5,7 +5,7 @@ namespace vulture{
         Window::Window(const std::string &title, const Rectangle &rect, const Flags flags){}
 
         void
-        Window::onClosed(){
+        Window::onClosed(const events::WindowEvent::Closed &){
             closed(true);
         }
 

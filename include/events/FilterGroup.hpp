@@ -8,11 +8,11 @@
 
 namespace vulture{
     namespace events{
-        class FilterGroup{
+        class FiltersGroup{
         public:
-            FilterGroup(const std::string &);
+            FiltersGroup(const std::string &);
             const std::string &name() const;
-            FilterGroup &add(std::shared_ptr<Filter>);
+            FiltersGroup &add(std::shared_ptr<Filter>);
             bool filter(const Event &);
         protected:
             virtual bool checkType(const Event &) = 0;

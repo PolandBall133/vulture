@@ -3,23 +3,23 @@
 using namespace std;
 namespace vulture{
     namespace events{
-        FilterGroup::FilterGroup(
+        FiltersGroup::FiltersGroup(
             const string &name
         ): _name(name){}
 
         const string &
-        FilterGroup::name() const{
+        FiltersGroup::name() const{
             return _name;
         }
 
-        FilterGroup &
-        FilterGroup::add(shared_ptr<Filter> efptr){
+        FiltersGroup &
+        FiltersGroup::add(shared_ptr<Filter> efptr){
             _filters.push_back(efptr);
             return *this;
         }
 
         bool
-        FilterGroup::filter(const Event &events){
+        FiltersGroup::filter(const Event &events){
             if(!checkType(events))
                 return false;
             for(auto &filter : _filters)

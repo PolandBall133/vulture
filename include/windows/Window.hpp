@@ -39,7 +39,7 @@ namespace vulture{
 
             virtual uint32_t ID() const = 0;
 
-            virtual void onClosed() override;
+            virtual void onClosed(const events::WindowEvent::Closed &) override;
             bool closed() const;
 
             struct Factory;

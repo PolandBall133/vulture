@@ -7,13 +7,18 @@ namespace vulture{
     namespace events{
         class WindowEvent{
         public:
+            struct Shown{};
+            struct Exposed{};
             struct Moved{
                 Point position;
             };
-
             struct Resized{
                 Size size;
             };
+            struct Minimized{};
+            struct Maximized{};
+            struct Restored{};
+            struct Closed{};
 
             enum class Type : uint32_t{
                 Shown, Exposed,
@@ -23,8 +28,14 @@ namespace vulture{
             };
 
             union Events{
+                Shown shown;
+                Exposed exposed;
                 Moved moved;
                 Resized resized;
+                Minimized minimized;
+                Maximized maximized;
+                Restored restored;
+                Closed closed;
             };
 
             Type type() const;

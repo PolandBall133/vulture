@@ -8,7 +8,6 @@ namespace vulture{
                 Window
             } type;
             union Events{
-                Events(){}
                 WindowEvent window;
             } events;
         };

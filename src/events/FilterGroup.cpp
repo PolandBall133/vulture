@@ -1,4 +1,4 @@
-#include "events/FilterGroup.hpp"
+#include "events/FiltersGroup.hpp"
 
 using namespace std;
 namespace vulture{

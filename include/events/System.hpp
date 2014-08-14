@@ -1,6 +1,6 @@
 #pragma once
 #include "events/Event.hpp"
-#include "events/FilterGroup.hpp"
+#include "events/FiltersGroup.hpp"
 #include <list>
 #include <memory>
 

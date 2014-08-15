@@ -23,12 +23,12 @@ namespace vulture{
             EventsCaller::EventsCaller(
                 System &system, Updater &updater
             ){
-                auto filtersGroup = make_shared<FiltersGroup>();
-                (*filtersGroup.get())
+                _filtersGroup = make_shared<FiltersGroup>();
+                (*_filtersGroup.get())
                     .add(make_shared<ButtonFilter>(updater))
                     .add(make_shared<MotionFilter>(updater))
                     .add(make_shared<WheelFilter>(updater));
-                system.addFilters(filtersGroup);
+                system.addFilters(_filtersGroup);
             }
         }
     }

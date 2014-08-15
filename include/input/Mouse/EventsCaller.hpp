@@ -1,6 +1,7 @@
 #pragma once
 
 #include "events/System.hpp"
+#include "events/FiltersGroup.hpp"
 
 #include "input/Mouse/Updater.hpp"
 #include "input/Mouse/Filters.hpp"
@@ -21,6 +22,7 @@ namespace vulture{
             public:
                 EventsCaller(events::System &, Updater &);
             private:
+                std::shared_ptr<FiltersGroup> _filtersGroup;
                 VULTURE_INPUT_MOUSE_DEFINE_INJECTED_UPDATER_FILTER(Button);
                 VULTURE_INPUT_MOUSE_DEFINE_INJECTED_UPDATER_FILTER(Motion);
                 VULTURE_INPUT_MOUSE_DEFINE_INJECTED_UPDATER_FILTER(Wheel);

@@ -37,8 +37,8 @@ namespace vulture{
         EventsCaller::EventsCaller(
             System &system
         ){
-            auto filtersGroup = make_shared<FiltersGroup>();
-            (*filtersGroup.get())
+            _filtersGroup = make_shared<FiltersGroup>();
+            (*_filtersGroup.get())
                 .add(make_shared<ShownFilter>(_windows))
                 .add(make_shared<ExposedFilter>(_windows))
                 .add(make_shared<MovedFilter>(_windows))
@@ -47,7 +47,7 @@ namespace vulture{
                 .add(make_shared<MaximizedFilter>(_windows))
                 .add(make_shared<RestoredFilter>(_windows))
                 .add(make_shared<ClosedFilter>(_windows));
-            system.addFilters(filtersGroup);
+            system.addFilters(_filtersGroup);
         }
 
         EventsCaller &

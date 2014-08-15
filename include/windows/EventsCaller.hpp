@@ -24,6 +24,7 @@ namespace vulture{
             EventsCaller(events::System &);
             EventsCaller &add(std::weak_ptr<Window>);
         protected:
+            std::shared_ptr<FiltersGroup> _filtersGroup;
             std::list<std::weak_ptr<Window>> _windows;
 
             VULTURE_WINDOWS_DEFINE_INJECTED_WINDOWS_LIST_FILTER(Shown);

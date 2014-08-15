@@ -10,6 +10,7 @@ namespace vulture{
                 Mouse
             } type;
             union Events{
+                Events(){}
                 WindowEvent window;
                 MouseEvent mouse;
             } events;

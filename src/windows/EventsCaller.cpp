@@ -35,10 +35,10 @@ namespace vulture{
         VULTURE_WINDOWS_DECLARE_INJECTED_WINDOWS_LIST_FILTER(Closed, closed);
 
         EventsCaller::EventsCaller(
-            shared_ptr<System> system
-        ): _system(system){
-            _filtersGroup = make_shared<FiltersGroup>();
-            (*_filtersGroup.get())
+            System &system
+        ){
+            auto filtersGroup = make_shared<FiltersGroup>();
+            (*filtersGroup.get())
                 .add(make_shared<ShownFilter>(_windows))
                 .add(make_shared<ExposedFilter>(_windows))
                 .add(make_shared<MovedFilter>(_windows))
@@ -47,7 +47,7 @@ namespace vulture{
                 .add(make_shared<MaximizedFilter>(_windows))
                 .add(make_shared<RestoredFilter>(_windows))
                 .add(make_shared<ClosedFilter>(_windows));
-            _system->addFilters(_filtersGroup);
+            system.addFilters(filtersGroup);
         }
 
         EventsCaller &

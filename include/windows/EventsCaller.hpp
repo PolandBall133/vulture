@@ -21,12 +21,10 @@ namespace vulture{
     namespace windows{
         class EventsCaller{
         public:
-            EventsCaller(std::shared_ptr<events::System>);
+            EventsCaller(events::System &);
             EventsCaller &add(std::weak_ptr<Window>);
         protected:
             std::list<std::weak_ptr<Window>> _windows;
-            std::shared_ptr<events::System> _system;
-            std::shared_ptr<FiltersGroup> _filtersGroup;
 
             VULTURE_WINDOWS_DEFINE_INJECTED_WINDOWS_LIST_FILTER(Shown);
             VULTURE_WINDOWS_DEFINE_INJECTED_WINDOWS_LIST_FILTER(Exposed);

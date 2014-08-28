@@ -1,10 +1,10 @@
 #pragma once
-#include "events/Filter.hpp"
-#include "events/Event.hpp"
 #include <list>
 #include <memory>
 #include <string>
 #include <utility>
+#include "events/Filter.hpp"
+#include "events/Event.hpp"
 
 namespace vulture{
     namespace events{

@@ -10,9 +10,11 @@ namespace vulture{
             struct Shown{};
             struct Exposed{};
             struct Moved{
+                explicit Moved(){}
                 Point position;
             };
             struct Resized{
+                explicit Resized(){}
                 Size size;
             };
             struct Minimized{};
